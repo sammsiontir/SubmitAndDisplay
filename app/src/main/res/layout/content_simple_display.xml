@@ -12,8 +12,33 @@
     tools:context="com.example.chengfu_lin.submitanddisplay.SimpleDisplayActivity"
     tools:showIn="@layout/activity_simple_display">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_label"
+        android:onClick="onSubmit"
+        android:id="@+id/btnSubmit"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tvWord"
+        android:id="@+id/tvWord"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etWord"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:hint="@string/etWord"
+        android:inputType="none" />
+
 </RelativeLayout>

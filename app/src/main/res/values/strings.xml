@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SubmitAndDisplay</string>
     <string name="action_settings">Settings</string>
+    <string name="submit_label">Submit</string>
+    <string name="tvWord">Not set yet</string>
+    <string name="etWord">Evter words</string>
 </resources>

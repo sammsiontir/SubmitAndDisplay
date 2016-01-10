@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class SimpleDisplayActivity extends AppCompatActivity {
+
+    private EditText etWord;
+    private TextView tvWord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,10 @@ public class SimpleDisplayActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        etWord = (EditText) findViewById(R.id.etWord);
+        tvWord = (TextView) findViewById(R.id.tvWord);
+
     }
 
     @Override
@@ -48,5 +58,11 @@ public class SimpleDisplayActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onSubmit(View view) {
+        String fieldValue = etWord.getText().toString();
+        tvWord.setText(fieldValue);
+        Toast.makeText(this, fieldValue, Toast.LENGTH_SHORT).show();
     }
 }
