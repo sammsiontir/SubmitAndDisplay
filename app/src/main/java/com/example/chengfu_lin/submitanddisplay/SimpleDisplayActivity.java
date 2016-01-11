@@ -64,5 +64,6 @@ public class SimpleDisplayActivity extends AppCompatActivity {
         String fieldValue = etWord.getText().toString();
         tvWord.setText(fieldValue);
         Toast.makeText(this, fieldValue, Toast.LENGTH_SHORT).show();
+        etWord.setText("");
     }
 }
